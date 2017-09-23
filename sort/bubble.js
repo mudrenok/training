@@ -12,4 +12,17 @@ const bubble = (arr = []) => {
   return arr;
 };
 
+const bubbleBetter = (arr = []) => {
+  const len = arr.length;
+  for (let i = len - 1; i >= 0; i--) {
+    for (let j = 0; j < i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]];
+      }
+    }
+  }
+  return arr;
+};
+
 console.log(bubble(arr));
+console.log(bubbleBetter(arr));
